@@ -26,6 +26,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-body {
+p {
+  margin-top: 1rem;
+}
+
+/* body {
   background-color: aqua;
+} */
+
+.hero-section {
+  height: 100dvh;
 }

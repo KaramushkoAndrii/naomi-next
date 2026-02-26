@@ -22,21 +22,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="drawer drawer-end min-h-full">
+        <div className="drawer drawer-end min-h-svh">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col h-full min-h-screen">
             {/* Navbar and PC menu */}
             <Header />
-            <main className="flex-1">
+            <main>
               {/* Page content here */}
               {children}
             </main>
           </div>
-          {/* there is mobile menu logic */}
+          {/* there is mobile menu logic  */}
           <NavigationMobile />
         </div>
       </body>
