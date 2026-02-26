@@ -1,3 +1,7 @@
+import { Header } from "@/components/header/Header";
+import { NavigationMobile } from "@/components/navigation/NavigationMobile";
+// import { NavigationList } from "@/components/navigation/NavigationList";
+// import { moksData } from "@/data/moks";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -18,11 +22,23 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}
       >
-        {children}
+        <div className="drawer drawer-end min-h-full">
+          <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+          <div className="drawer-content flex flex-col h-full min-h-screen">
+            {/* Navbar and PC menu */}
+            <Header />
+            <main className="flex-1">
+              {/* Page content here */}
+              {children}
+            </main>
+          </div>
+          {/* there is mobile menu logic */}
+          <NavigationMobile />
+        </div>
       </body>
     </html>
   );
