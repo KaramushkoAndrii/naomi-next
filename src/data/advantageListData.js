@@ -5,11 +5,11 @@ export const AdvantageListData = [
   {
     id: 1,
     text: "Безпечно",
-    icon: <MdOutlineHealthAndSafety />,
+    icon: <MdOutlineHealthAndSafety size={40} />,
   },
   {
     id: 2,
     text: "Оперативність",
-    icon: <BsLightningCharge />,
+    icon: <BsLightningCharge size={40} />,
   },
 ];
