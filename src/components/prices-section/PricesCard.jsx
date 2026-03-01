@@ -19,7 +19,7 @@ export const PricesCard = ({ card }) => {
     );
   };
   return (
-    <div className="card w-96 bg-base-100 shadow-sm">
+    <div className="card w-90 bg-base-100 shadow-sm">
       <div className="card-body">
         <div className="flex flex-col gap-4 justify-between">
           <h2 className="text-3xl font-bold">{title}</h2>
