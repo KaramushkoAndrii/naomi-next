@@ -1,5 +1,6 @@
 import { NavigationList } from "./NavigationList";
-import { moksData } from "@/data/moks";
+// import { moksData } from "@/data/moks";
+import { NavigationData } from "@/data/navigationData";
 
 export const NavigationMobile = () => {
   return (
@@ -11,7 +12,7 @@ export const NavigationMobile = () => {
       ></label>
       {/* mobile menu is there */}
       <NavigationList
-        list={moksData}
+        list={NavigationData}
         classNames="menu bg-base-200 min-h-full w-80 p-4"
       />
     </div>
