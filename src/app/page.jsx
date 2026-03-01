@@ -3,6 +3,7 @@ import { AboutSection } from "@/components/about-section/AboutSection";
 import { AdvantageSection } from "@/components/abvantage-section/AdvantageSection";
 import { ServicesSection } from "@/components/services-section/ServicesSection";
 import { PricesSection } from "@/components/prices-section/PricesSection";
+import { Footer } from "@/components/footer/Footer";
 
 export default async function Home({ params }) {
   return (
@@ -12,6 +13,7 @@ export default async function Home({ params }) {
       <AdvantageSection />
       <ServicesSection />
       <PricesSection />
+      <Footer />
     </>
   );
 }
