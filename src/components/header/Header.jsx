@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { NavigationList } from "../navigation/NavigationList";
-import { moksData } from "@/data/moks";
+import { NavigationData } from "@/data/navigationData";
 
 export const Header = () => {
   return (
@@ -30,7 +30,10 @@ export const Header = () => {
         <Image width={140} height={70} alt="naomi clining" src="/logo.svg" />
       </div>
       <div className="hidden flex-none lg:block">
-        <NavigationList list={moksData} classNames="menu menu-horizontal" />
+        <NavigationList
+          list={NavigationData}
+          classNames="menu menu-horizontal"
+        />
       </div>
     </div>
   );
