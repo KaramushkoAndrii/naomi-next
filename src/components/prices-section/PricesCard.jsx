@@ -23,7 +23,7 @@ export const PricesCard = ({ card }) => {
       <div className="card-body">
         <div className="flex flex-col gap-4 justify-between">
           <h2 className="text-3xl font-bold">{title}</h2>
-          <span className="text-xl">{price}</span>
+          <span className="text-xl">Від {price} грн</span>
         </div>
         <ul className="mt-6 flex flex-col gap-2 text-xs">
           {services?.map((service, index) => (
