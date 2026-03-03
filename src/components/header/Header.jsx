@@ -1,6 +1,7 @@
-import Image from "next/image";
+import Link from "next/link";
 import { NavigationList } from "../navigation/NavigationList";
 import { NavigationData } from "@/data/navigationData";
+import { Logo } from "../UI/Logo";
 
 export const Header = () => {
   return (
@@ -27,7 +28,9 @@ export const Header = () => {
         </label>
       </div>
       <div className="mx-2 flex-1 px-2">
-        <Image width={140} height={70} alt="naomi clining" src="/logo.svg" />
+        <Link href="/">
+          <Logo width="140" height="70" className="text-primary-violet" />
+        </Link>
       </div>
       <div className="hidden flex-none lg:block">
         <NavigationList

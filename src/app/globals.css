@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@theme {
+  --color-primary-violet: #5f3882;
+  --color-primary-blue: #273c7c;
+  --color-primary-white: #fff;
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -33,10 +39,6 @@ html {
 p {
   margin-top: 1rem;
 }
-
-/* body {
-  background-color: aqua;
-} */
 
 .hero-section {
   height: 100dvh;
