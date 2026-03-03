@@ -1,8 +1,7 @@
 import { Header } from "@/components/header/Header";
 import { NavigationMobile } from "@/components/navigation/NavigationMobile";
-// import { NavigationList } from "@/components/navigation/NavigationList";
-// import { moksData } from "@/data/moks";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Modal } from "@/components/UI/Modal";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -35,6 +34,7 @@ export default function RootLayout({ children }) {
               {/* Page content here */}
               {children}
             </main>
+            <Modal />
           </div>
           {/* there is mobile menu logic  */}
           <NavigationMobile />

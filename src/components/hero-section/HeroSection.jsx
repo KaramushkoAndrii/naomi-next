@@ -1,26 +1,5 @@
-// import Image from "next/image";
-
-// export const HeroSection = () => {
-//   return (
-//     <section className="hero-section relative w-dvw">
-//       <Image
-//         src="/hero.webp"
-//         alt="clining"
-//         fill
-//         className="object-cover object-center"
-//       />
-//       <div className="absolute content-[''] top-0 left-0 w-full h-full bg-amber-400/70 z-1"></div>
-//       <div className="hero-content relative w-full h-full flex flex-col items-start z-2 text-start">
-//         <h1>Клінінговая компанія Naomi</h1>
-//         <h2>Клінінгові услуги Київ та область</h2>
-//         <div className="flex flex-col gap-2 mt-10">
-//           <button className="btn rounded-[30px]">Замовити прибирання</button>
-//           <button className="btn rounded-[30px]">Детальніше</button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
+import Link from "next/link";
+import { ModalOpenButton } from "../UI/ModalOpenButton";
 
 export const HeroSection = () => {
   return (
@@ -40,8 +19,10 @@ export const HeroSection = () => {
             Клінінгові услуги Київ та область
           </p>
           <div className="flex flex-col gap-4 w-fit">
-            <button className="btn btn-primary">Замовити прибирання</button>
-            <button className="btn btn-primary">Детальніше</button>
+            <ModalOpenButton modalId="form-1" text={"Замовити прибирання"} />
+            <button className="btn btn-primary">
+              <Link href="#advantage">Детальніше</Link>
+            </button>
           </div>
         </div>
       </div>
