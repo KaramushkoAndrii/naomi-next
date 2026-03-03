@@ -4,6 +4,7 @@ export const ServicesListData = [
     description: "Текст опису генерального прибирання",
     img: "/hero.webp",
     alt: "this is alt for general uborka",
+    href: "general",
     id: 1,
   },
   {
@@ -11,6 +12,7 @@ export const ServicesListData = [
     description: "Текст опису вивозу сміття",
     img: "/hero.webp",
     alt: "this is alt for viviz smittya",
+    href: "remont",
     id: 2,
   },
 ];
