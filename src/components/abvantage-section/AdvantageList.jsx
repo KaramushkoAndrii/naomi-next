@@ -7,7 +7,7 @@ export const AdvantageList = ({ advantageList }) => {
           className="flex flex-col justify-center items-center gap-2"
         >
           <i>{advantageItem.icon}</i>
-          {advantageItem.text}
+          <p className="text-list-item">{advantageItem.text}</p>
         </li>
       ))}
     </ul>

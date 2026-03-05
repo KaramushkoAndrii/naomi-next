@@ -1,9 +1,9 @@
 export const AboutSection = () => {
   return (
-    <section className="m-4" id="about">
-      <h2 className="text-3xl font-medium">Про нас</h2>
+    <section className="my-4" id="about">
+      <h2 className="text-sub-title font-medium">Про нас</h2>
 
-      <p>
+      <p className="text-main-text">
         В основе создания компании Naomi легла простая идея: дом — это место,
         где человек должен наполняться энергией, а не тратить её на борьбу с
         пылью. Мы начали свой путь как небольшая семейная команда, объединенная
@@ -12,8 +12,8 @@ export const AboutSection = () => {
         ценности: честность, внимание к деталям и искреннее желание помочь.
       </p>
 
-      <h3 className="text-2xl font-medium my-4">Чому обирають нас</h3>
-      <ul className="flex flex-col gap-2">
+      <h2 className="text-sub-title font-medium my-4">Чому обирають нас</h2>
+      <ul className="flex flex-col gap-2 text-main-text">
         <li>
           Экологичность и безопасность: Мы используем только сертифицированные
           гипоаллергенные средства, безопасные для детей и домашних животных.
@@ -30,7 +30,7 @@ export const AboutSection = () => {
         </li>
       </ul>
 
-      <p>
+      <p className="text-main-text">
         Мы не просто моем полы и протираем окна. Мы создаем пространство, в
         котором дышится легко. Для нас не существует «мелочей»: каждый угол,
         каждый плинтус и каждый сантиметр мебели проходит через строгий контроль
