@@ -1,5 +1,6 @@
 import { Header } from "@/components/header/Header";
 import { NavigationMobile } from "@/components/navigation/NavigationMobile";
+import { Footer } from "@/components/footer/Footer";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Modal } from "@/components/UI/Modal";
 import "./globals.css";
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
               {/* Page content here */}
               {children}
             </main>
+            <Footer />
             <Modal />
           </div>
           {/* there is mobile menu logic  */}

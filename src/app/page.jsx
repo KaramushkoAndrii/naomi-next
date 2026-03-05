@@ -24,7 +24,6 @@ export default async function Home({ params }) {
       <Modal id="form-3">
         <ModalOrder />
       </Modal>
-      <Footer />
     </>
   );
 }
