@@ -8,7 +8,7 @@ export const ChoiceCard = ({ data }) => {
 
   return (
     <li
-      className={`flex flex-col gap-4 w-[70dvw] lg:w-[27dvw] p-4 rounded-main-radius`}
+      className={`flex flex-col gap-4 w-[90%] lg:w-[27dvw] p-4 rounded-main-radius`}
       style={{
         background: `linear-gradient(to bottom, ${colors.from} 50%, ${colors.to} 50%)`,
       }}
