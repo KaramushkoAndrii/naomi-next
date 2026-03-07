@@ -3,7 +3,9 @@ import { Form } from "./Form";
 export const FormSection = () => {
   return (
     <section className="my-4" id="contact">
-      <h2 className="py-2">Залишились питання? Звяжись з нами!</h2>
+      <h2 className="py-2 text-center text-section-title">
+        Залишились питання? Звяжись з нами!
+      </h2>
       <Form />
     </section>
   );
