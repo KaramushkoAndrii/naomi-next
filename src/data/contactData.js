@@ -17,4 +17,10 @@ export const ContactData = [
     type: "message",
     id: 3,
   },
+  {
+    title: "0979863778",
+    src: "0979863777",
+    type: "tel",
+    id: 4,
+  },
 ];
