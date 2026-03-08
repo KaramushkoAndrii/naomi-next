@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
           <div className="drawer-content flex flex-col h-full min-h-screen">
             {/* Navbar and PC menu */}
             <Header />
-            <main>
+            <main className="pt-15">
               {/* Page content here */}
               {children}
             </main>

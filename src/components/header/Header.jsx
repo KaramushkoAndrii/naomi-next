@@ -5,7 +5,7 @@ import { Logo } from "../UI/Logo";
 
 export const Header = () => {
   return (
-    <div className="navbar bg-base-300 w-full">
+    <div className="navbar bg-base-300 w-full fixed z-10">
       <div className="flex-none lg:hidden">
         <label
           htmlFor="my-drawer-2"
