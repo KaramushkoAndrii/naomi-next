@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { NavigationServices } from "./NavigationServices";
 import { NavigationServicesData } from "@/data/navigationData";
+import { ContactsList } from "../contacts-list/ContactsList";
+import { ContactData } from "@/data/contactData";
 
 export const NavigationList = ({ list, classNames }) => {
   return (
@@ -12,6 +14,9 @@ export const NavigationList = ({ list, classNames }) => {
       ))}
       <li>
         <NavigationServices list={NavigationServicesData} />
+      </li>
+      <li>
+        <ContactsList contactsList={ContactData} />
       </li>
     </ul>
   );
