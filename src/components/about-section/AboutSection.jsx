@@ -21,7 +21,7 @@ export const AboutSection = () => {
       </div>
 
       <h2 className="text-sub-title font-medium my-4">Чому обирають нас</h2>
-      <ul className="flex flex-col gap-2 justify-evenly items-baseline text-main-text flex-wrap md:flex-row lg:flex-nowrap">
+      <ul className="flex flex-col gap-8 justify-evenly items-center md:items-baseline text-main-text flex-wrap md:flex-row lg:flex-nowrap">
         {ChoiceCardsData.map((card) => (
           <ChoiceCard data={card} key={card.id} />
         ))}
