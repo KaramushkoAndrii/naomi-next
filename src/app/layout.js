@@ -8,7 +8,7 @@ import "./globals.css";
 const firaSans = Fira_Sans({
   variable: "--font-fira-sans",
   subsets: ["cyrillic", "latin"],
-  weight: ["300"],
+  weight: ["300", "400"],
   display: "swap",
 });
 
