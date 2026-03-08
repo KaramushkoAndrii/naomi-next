@@ -1,17 +1,22 @@
 import { Header } from "@/components/header/Header";
 import { NavigationMobile } from "@/components/navigation/NavigationMobile";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Footer } from "@/components/footer/Footer";
+import { Fira_Sans, Kurale } from "next/font/google";
 import { Modal } from "@/components/UI/Modal";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const firaSans = Fira_Sans({
+  variable: "--font-fira-sans",
+  subsets: ["cyrillic", "latin"],
+  weight: ["300"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const kurale = Kurale({
+  variable: "--font-kurale",
+  subsets: ["cyrillic", "latin"],
+  weight: ["400"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -21,9 +26,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="uk">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${firaSans.variable} ${kurale.variable} ${firaSans.className} antialiased`}
       >
         <div className="drawer drawer-end min-h-svh">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -34,6 +39,7 @@ export default function RootLayout({ children }) {
               {/* Page content here */}
               {children}
             </main>
+            <Footer />
             <Modal />
           </div>
           {/* there is mobile menu logic  */}

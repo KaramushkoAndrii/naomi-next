@@ -16,7 +16,10 @@ export const Form = () => {
   const onSubmit = (data) => console.log("Отправлены данные:", data);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col w-[80dvw] mx-auto md:flex-row md:items-start md:gap-6"
+    >
       <div className="form-control w-full">
         <input
           type="tel"
@@ -37,7 +40,7 @@ export const Form = () => {
 
       <button
         type="submit"
-        className="flex btn btn-primary mt-4 mx-auto w-[75%]"
+        className="flex btn btn-primary mt-4 mx-auto w-[75%] md:mt-0 md:w-[30dvw]"
       >
         Відправити
       </button>

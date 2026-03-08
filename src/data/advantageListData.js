@@ -12,4 +12,24 @@ export const AdvantageListData = [
     text: "Оперативність",
     icon: <BsLightningCharge size={60} />,
   },
+  {
+    id: 3,
+    text: "Безпечно",
+    icon: <MdOutlineHealthAndSafety size={60} />,
+  },
+  {
+    id: 4,
+    text: "Оперативність",
+    icon: <BsLightningCharge size={60} />,
+  },
+  {
+    id: 5,
+    text: "Безпечно",
+    icon: <MdOutlineHealthAndSafety size={60} />,
+  },
+  {
+    id: 6,
+    text: "Оперативність",
+    icon: <BsLightningCharge size={60} />,
+  },
 ];

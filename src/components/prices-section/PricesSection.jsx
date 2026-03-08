@@ -3,8 +3,8 @@ import { PricesData } from "@/data/pricesData";
 
 export const PricesSection = () => {
   return (
-    <section className="mx-4">
-      <h2>Наші ціни</h2>
+    <section>
+      <h2 className="text-sub-title">Наші ціни</h2>
       <PricesList list={PricesData} />
     </section>
   );

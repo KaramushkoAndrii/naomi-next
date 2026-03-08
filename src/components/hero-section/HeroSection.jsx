@@ -12,15 +12,19 @@ export const HeroSection = () => {
       <div className="hero-overlay"></div>
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-md flex flex-col items-center">
-          <h1 className="flex flex-col mb-5 text-6xl font-bold">
+          <h1 className="flex flex-col mb-5 text-4xl font-bold w-[60%]">
             Клінінговая компанія Naomi
           </h1>
-          <p className="mb-5 text-2xl font-medium">
+          <p className="mb-5 text-2xl font-medium w-[55%]">
             Клінінгові услуги Київ та область
           </p>
-          <div className="flex flex-col gap-4 w-fit">
-            <ModalOpenButton modalId="form-1" text={"Замовити прибирання"} />
-            <button className="btn bg-primary-violet">
+          <div className="flex flex-col gap-4 w-fit md:flex-row md:justify-center">
+            <ModalOpenButton
+              modalId="form-1"
+              text={"Замовити прибирання"}
+              classNames="w-full"
+            />
+            <button className="btn bg-primary-violet w-full">
               <Link href="#advantage">Детальніше</Link>
             </button>
           </div>
