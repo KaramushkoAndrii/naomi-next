@@ -6,6 +6,14 @@
   --color-primary-blue: #273c7c;
   --color-primary-white: #fff;
 
+  /*colors for choice cards*/
+  --color-card-eco-top: #e0f2e9;
+  --color-card-eco-bottom: #8bc34a;
+  --color-card-tehno-top: #e1f5fe;
+  --color-card-tehno-bottom: #29b6f6;
+  --color-card-care-top: #fffde7;
+  --color-card-care-bottom: #fbc02d;
+
   --text-sub-title: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
   --text-section-title: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
   --text-list-item: clamp(1.2rem, 1rem + 0.5vw, 1.5rem);
@@ -43,9 +51,9 @@ html {
   scroll-behavior: smooth;
 }
 
-p {
+/* p {
   margin-top: 0.5rem;
-}
+} */
 
 .hero-section {
   height: 100dvh;

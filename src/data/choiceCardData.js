@@ -2,7 +2,7 @@ import { GiEcology } from "react-icons/gi";
 
 export const ChoiceCardsData = [
   {
-    title: "Экологичность и безопасность",
+    title: "Єкологія та безпека",
     iconsList: [
       <GiEcology size={60} key={1} />,
       <GiEcology size={60} key={2} />,
@@ -15,13 +15,14 @@ export const ChoiceCardsData = [
     description:
       "Мы используем только сертифицированные гипоаллергенные средства, безопасные для детей и домашних животных",
     colors: {
-      from: "#0000ff",
-      to: "#ff0000",
+      from: "from-card-eco-top",
+      to: "to-card-eco-bottom",
+      icon: "text-card-eco-bottom",
     },
     id: 1,
   },
   {
-    title: "Экологичность и безопасность",
+    title: "Технологічний підхід",
     iconsList: [
       <GiEcology size={60} key={1} />,
       <GiEcology size={60} key={2} />,
@@ -32,15 +33,16 @@ export const ChoiceCardsData = [
       alt: "clininggggggg2222222222",
     },
     description:
-      "Мы используем только сертифицированные гипоаллергенные средства, безопасные для детей и домашних животных",
+      "В нашем арсенале — профессиональное оборудование, которое позволяет добиваться результата",
     colors: {
-      from: "#0000ff",
-      to: "#ff0000",
+      from: "from-card-tehno-top",
+      to: "to-card-tehno-bottom",
+      icon: "text-card-tehno-bottom",
     },
     id: 2,
   },
   {
-    title: "Экологичность и безопасность",
+    title: "Турбота про ваш час",
     iconsList: [
       <GiEcology size={60} key={1} />,
       <GiEcology size={60} key={2} />,
@@ -51,10 +53,11 @@ export const ChoiceCardsData = [
       alt: "clininggggggg2222222222",
     },
     description:
-      "Мы используем только сертифицированные гипоаллергенные средства, безопасные для детей и домашних животных",
+      "Пока мы доводим поверхности до блеска, вы можете посвятить время семье, хобби или отдыху. ",
     colors: {
-      from: "#0000ff",
-      to: "#ff0000",
+      from: "from-card-care-top",
+      to: "to-card-care-bottom",
+      icon: "text-card-care-bottom",
     },
     id: 3,
   },

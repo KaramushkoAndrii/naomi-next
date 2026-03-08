@@ -21,31 +21,13 @@ export const AboutSection = () => {
       </div>
 
       <h2 className="text-sub-title font-medium my-4">Чому обирають нас</h2>
-      <ul className="flex flex-col gap-2 justify-evenly items-center text-main-text flex-wrap md:flex-row">
+      <ul className="flex flex-col gap-2 justify-evenly items-baseline text-main-text flex-wrap md:flex-row lg:flex-nowrap">
         {ChoiceCardsData.map((card) => (
           <ChoiceCard data={card} key={card.id} />
         ))}
       </ul>
 
-      {/* <ChoiceCard /> */}
-      {/* <ul className="flex flex-col gap-2 text-main-text">
-        <li>
-          Экологичность и безопасность: Мы используем только сертифицированные
-          гипоаллергенные средства, безопасные для детей и домашних животных.
-        </li>
-        <li>
-          Технологичный подход: В нашем арсенале — профессиональное оборудование
-          (парогенераторы, мощные пылесосы с HEPA-фильтрами), которое позволяет
-          добиваться результата там, где обычная уборка бессильна.
-        </li>
-        <li>
-          Забота о вашем времени: Пока мы доводим поверхности до блеска, вы
-          можете посвятить время семье, хобби или отдыху. Мы возвращаем вам не
-          просто чистоту, а свободные часы жизни.
-        </li>
-      </ul> */}
-
-      <p className="text-main-text">
+      <p className="text-main-text mt-4">
         Мы не просто моем полы и протираем окна. Мы создаем пространство, в
         котором дышится легко. Для нас не существует «мелочей»: каждый угол,
         каждый плинтус и каждый сантиметр мебели проходит через строгий контроль

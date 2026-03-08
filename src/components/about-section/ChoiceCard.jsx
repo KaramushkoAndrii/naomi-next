@@ -1,27 +1,20 @@
-// import { GiEcology } from "react-icons/gi";
 import { ImgContainer } from "../UI/ImgContainer";
 
 export const ChoiceCard = ({ data }) => {
   const { title, iconsList, imgData, description, colors } = data;
 
-  const iconColor = colors.to;
-
   return (
     <li
-      className={`flex flex-col gap-4 w-[90%] lg:w-[27dvw] p-4 rounded-main-radius`}
-      style={{
-        background: `linear-gradient(to bottom, ${colors.from} 50%, ${colors.to} 50%)`,
-      }}
+      className={`flex flex-col gap-4 w-[90%] md:h-[stretch] lg:w-[27dvw] max-w-100 p-4 rounded-main-radius bg-linear-to-b ${colors.from} from-50% ${colors.to} to-50%`}
     >
-      <ul className="flex gap-4 justify-around" style={{ color: iconColor }}>
+      <ul className={`flex gap-4 justify-around ${colors.icon}`}>
         {iconsList.map((icon, index) => (
           <li key={index}>{icon}</li>
         ))}
       </ul>
-      <h2>{title}</h2>
+      <h2 className="text-main-text text-nowrap text-center">{title}</h2>
       <ImgContainer src={imgData.src} alt={imgData.alt} />
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <p className="text-main-text mb-0 mt-auto max-h-[50%]">{description}</p>
     </li>
   );
 };
