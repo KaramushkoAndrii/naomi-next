@@ -20,11 +20,7 @@ export default async function Home({ params }) {
         <FormSection />
       </Container>
 
-      <Modal id="form-1" title="title for form 1">
-        <ModalOrder />
-      </Modal>
-      <Modal id="form-2" title="title for form 2" />
-      <Modal id="form-3">
+      <Modal id="main-form" title="Залишити заявку на прибирання">
         <ModalOrder />
       </Modal>
     </>
