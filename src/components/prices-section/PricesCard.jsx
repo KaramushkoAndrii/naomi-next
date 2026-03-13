@@ -35,11 +35,11 @@ export const PricesCard = ({ card }) => {
             </li>
           ))}
         </ul>
-        <ModalOpenButton
+        {/* <ModalOpenButton
           modalId={modalId}
           text={"Замовити"}
           classNames={"flex w-full mt-6"}
-        />
+        /> */}
       </div>
     </div>
   );

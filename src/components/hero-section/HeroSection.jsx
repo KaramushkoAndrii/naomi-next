@@ -1,7 +1,10 @@
+"use client";
 import Link from "next/link";
 import { ModalOpenButton } from "../UI/ModalOpenButton";
+import { useModalStore } from "@/libs/useModalStore";
 
 export const HeroSection = () => {
+  const { openModal } = useModalStore();
   return (
     <div
       className="hero min-h-screen"
@@ -19,11 +22,19 @@ export const HeroSection = () => {
             Клінінгові услуги Київ та область
           </p>
           <div className="flex flex-col gap-4 w-fit md:flex-row md:justify-center">
-            <ModalOpenButton
+            {/* <ModalOpenButton
               modalId="main-form"
               text={"Замовити прибирання"}
               classNames="w-full"
-            />
+            /> */}
+            <button
+              className="btn btn-primary w-full"
+              onClick={() =>
+                openModal("order", { title: "Загальне замовлення 25" })
+              }
+            >
+              Замовити прибирання
+            </button>
             <button className="btn btn-primary w-full">
               <Link href="#advantage">Детальніше</Link>
             </button>
