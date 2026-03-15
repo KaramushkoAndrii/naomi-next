@@ -2,6 +2,7 @@
 
 import { Portal } from "./Portal";
 import { ModalOrder } from "./ModalOrder";
+import { ModalRequest } from "./ModalRequest";
 import { useModalStore } from "@/libs/useModalStore";
 
 export const Modal = ({ title = "Статус замовлення" }) => {
@@ -14,7 +15,8 @@ export const Modal = ({ title = "Статус замовлення" }) => {
       case "order":
         return <ModalOrder />;
       case "status":
-        return <h3>{modalData.title}</h3>;
+        return <ModalRequest data={modalData} />;
+      // return <h3>{modalData.title}</h3>;
       default:
         return null;
     }

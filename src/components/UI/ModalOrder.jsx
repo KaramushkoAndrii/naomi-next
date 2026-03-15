@@ -30,20 +30,29 @@ export const ModalOrder = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/postssss",
-        {
-          method: "POST",
-          body: JSON.stringify(data),
-        },
-      );
-      if (!response.ok) throw new Error();
+      // const response = await fetch(
+      //   "https://jsonplaceholder.typicode.com/postssss",
+      //   {
+      //     method: "POST",
+      //     body: JSON.stringify(data),
+      //   },
+      // );
+      // if (!response.ok) throw new Error();
 
       reset();
 
-      openModal("status", { title: "Заявку успішно надіслано" });
+      openModal("status", {
+        title: "Заявку успішно надіслано",
+        description: "Ваша заявку успішно надісллана",
+        btn: "Закрити",
+      });
     } catch (e) {
-      openModal("status", { title: "Сталася помилка" });
+      openModal("status", {
+        title: "Сталася помилка",
+        description:
+          "Вашу заявку не було передано. Спробуйте будь ласка пізніше",
+        btn: "На головну",
+      });
     } finally {
       setLoading(false);
     }
