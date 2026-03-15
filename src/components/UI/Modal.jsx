@@ -4,16 +4,17 @@ import { Portal } from "./Portal";
 import { ModalOrder } from "./ModalOrder";
 import { useModalStore } from "@/libs/useModalStore";
 
-export const Modal = ({ title = "Стандарт" }) => {
+export const Modal = ({ title = "Статус замовлення" }) => {
   const { isOpen, closeModal, modalType, modalData } = useModalStore();
+  console.log("thi is data:", modalData);
   if (!isOpen) return null;
 
   const renderContent = () => {
     switch (modalType) {
       case "order":
         return <ModalOrder />;
-      case "sucses":
-        return <h3>Замовлення прийняте</h3>;
+      case "status":
+        return <h3>{modalData.title}</h3>;
       default:
         return null;
     }
@@ -26,7 +27,7 @@ export const Modal = ({ title = "Стандарт" }) => {
       >
         <div className="custom-modal bg-white rounded-main-radius shadow-2xl w-full max-w-md overflow-hidden">
           <header className="flex justify-between items-center p-2">
-            <h3>{modalData.title}</h3>
+            <h3>{modalData.header ? modalData.header : title}</h3>
             <button onClick={closeModal}>X</button>
           </header>
           <div className="p-4">{renderContent()}</div>

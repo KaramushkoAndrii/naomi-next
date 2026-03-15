@@ -3,8 +3,12 @@
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "./ErrorMessage";
 import { ServicesListData } from "@/data/servicesListData";
+import { useModalStore } from "@/libs/useModalStore";
+import { useState } from "react";
 
 export const ModalOrder = () => {
+  const { openModal } = useModalStore();
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -20,35 +24,29 @@ export const ModalOrder = () => {
     },
   });
 
-  const onSubmit = (data) => {
-    // console.log("данніе: ", modalId, data);
+  const onSubmit = async (data) => {
+    console.log("The submit data:", data);
 
-    // reset({
-    //   name: "",
-    //   tel: "",
-    //   service: ServicesListData[0]?.title || "",
-    //   agreeForData: true,
-    // });
+    setLoading(true);
 
-    // const modal = document.getElementById(modalId);
+    try {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/postssss",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+        },
+      );
+      if (!response.ok) throw new Error();
 
-    // if (modal instanceof HTMLDialogElement) {
-    //   modal.close();
-    // }
+      reset();
 
-    console.log("RHF DATA", data);
-
-    const form = document.querySelector("form");
-    const formData = new FormData(form);
-
-    console.log("REAL DOM DATA", Object.fromEntries(formData));
-
-    reset();
-
-    // const modal = document.getElementById(modalId);
-    // if (modal instanceof HTMLDialogElement) {
-    //   modal.close();
-    // }
+      openModal("status", { title: "Заявку успішно надіслано" });
+    } catch (e) {
+      openModal("status", { title: "Сталася помилка" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const telError = errors.tel?.message;
@@ -107,7 +105,7 @@ export const ModalOrder = () => {
       <ErrorMessage message={nameError} />
       <ErrorMessage message={telError} />
       <button type="submit" className="btn btn-primary mt-2">
-        Відправити зявку
+        {loading ? "Відправляємо заявку..." : "Відправити"}
       </button>
     </form>
   );

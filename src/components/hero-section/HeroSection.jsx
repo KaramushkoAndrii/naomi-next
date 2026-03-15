@@ -30,7 +30,7 @@ export const HeroSection = () => {
             <button
               className="btn btn-primary w-full"
               onClick={() =>
-                openModal("order", { title: "Загальне замовлення 25" })
+                openModal("order", { header: "Загальне замовлення 25" })
               }
             >
               Замовити прибирання

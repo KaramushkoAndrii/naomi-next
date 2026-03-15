@@ -5,8 +5,6 @@ import { AdvantageSection } from "@/components/abvantage-section/AdvantageSectio
 import { ServicesSection } from "@/components/services-section/ServicesSection";
 import { PricesSection } from "@/components/prices-section/PricesSection";
 import { FormSection } from "@/components/form-section/FormSection";
-import { Modal } from "@/components/UI/Modal";
-import { ModalOrder } from "@/components/UI/ModalOrder";
 
 export default async function Home({ params }) {
   return (
@@ -19,10 +17,6 @@ export default async function Home({ params }) {
         <PricesSection />
         <FormSection />
       </Container>
-
-      {/* <Modal id="main-form" title="Залишити заявку на прибирання">
-        <ModalOrder modalId={"main-form"} />
-      </Modal> */}
     </>
   );
 }
