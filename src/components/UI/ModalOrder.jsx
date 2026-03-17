@@ -5,6 +5,7 @@ import { ErrorMessage } from "./ErrorMessage";
 import { ServicesListData } from "@/data/servicesListData";
 import { useModalStore } from "@/libs/useModalStore";
 import { useState } from "react";
+import { ValidationRules } from "@/libs/validationRules";
 
 export const ModalOrder = () => {
   const { openModal } = useModalStore();
@@ -24,28 +25,30 @@ export const ModalOrder = () => {
     },
   });
 
+  const { tel } = ValidationRules;
+
   const onSubmit = async (data) => {
     console.log("The submit data:", data);
 
     setLoading(true);
 
     try {
-      // const response = await fetch(
-      //   "https://jsonplaceholder.typicode.com/postssss",
-      //   {
-      //     method: "POST",
-      //     body: JSON.stringify(data),
-      //   },
-      // );
-      // if (!response.ok) throw new Error();
-
-      reset();
-
-      openModal("status", {
-        title: "Заявку успішно надіслано",
-        description: "Ваша заявку успішно надісллана",
-        btn: "Закрити",
+      const response = await fetch("/api/telegram", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
+
+      if (response.ok) {
+        reset();
+        openModal("status", {
+          title: "Заявку успішно надіслано",
+          description: "Ваша заявку успішно надісллана",
+          btn: "Закрити",
+        });
+      } else {
+        throw new Error();
+      }
     } catch (e) {
       openModal("status", {
         title: "Сталася помилка",
@@ -81,9 +84,8 @@ export const ModalOrder = () => {
         {...register("tel", {
           required: true,
           pattern: {
-            value:
-              /^(?:\+?38)?0(50|63|66|67|68|73|89|91|92|93|94|95|96|97|98|99)\d{7}$/,
-            message: "Введенний телефон не коректний",
+            value: tel.pattern,
+            message: tel.message,
           },
         })}
       />

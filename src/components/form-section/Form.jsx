@@ -1,19 +1,63 @@
 "use client";
 
+import { useState } from "react";
+import { useModalStore } from "@/libs/useModalStore";
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from "../UI/ErrorMessage";
+import { ValidationRules } from "@/libs/validationRules";
 
 export const Form = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const openModal = useModalStore((state) => state.openModal);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     mode: "onChange",
   });
 
   const telError = errors.tel?.message;
-  const onSubmit = (data) => console.log("Отправлены данные:", data);
+  const onSubmit = async (data) => {
+    setIsLoading(true);
+
+    try {
+      const payLoad = {
+        name: "Клієнт (Зворотний дзвінок)",
+        tel: data.tel,
+        service: "Консультація / Передзвонити",
+      };
+
+      const response = await fetch("/api/telegram", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payLoad),
+      });
+
+      if (response.ok) {
+        reset();
+        openModal("status", {
+          title: "Дякуємо!",
+          description:
+            "Ваша заявка прийнята ми зв'яжемось із вами найблдижчим часом",
+          btn: "Закрити",
+        });
+      } else {
+        throw new Error("Failed to send");
+      }
+    } catch (e) {
+      openModal("status", {
+        title: "Помилка",
+        description: "Упс, сталася помилка. Спробуйте будь ласка пізніше",
+        btn: "Назад",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const { tel, requared } = ValidationRules;
 
   return (
     <form
@@ -26,12 +70,12 @@ export const Form = () => {
           placeholder="Введіть свій номер телефону"
           className={`input input-bordered w-full ${errors.tel ? "input-error" : ""}`}
           autoComplete="tel"
+          disabled={isLoading}
           {...register("tel", {
-            required: "Це поле є обов'язковим",
+            required: requared,
             pattern: {
-              value:
-                /^(?:\+?38)?0(50|63|66|67|68|73|89|91|92|93|94|95|96|97|98|99)\d{7}$/,
-              message: "Введенний телефон не коректний",
+              value: tel.pattern,
+              message: tel.message,
             },
           })}
         />
@@ -41,8 +85,9 @@ export const Form = () => {
       <button
         type="submit"
         className="flex btn btn-primary mt-4 mx-auto w-[75%] md:mt-0 md:w-[30dvw]"
+        disabled={isLoading}
       >
-        Відправити
+        {isLoading ? "Надсилаємо" : "Відправити"}
       </button>
     </form>
   );
