@@ -8,6 +8,10 @@ export async function POST(request) {
 
     return NextResponse.json({ success: true });
   } catch (e) {
-    return NextResponse.json({ success: false }, { status: 500 });
+    console.log(e);
+    return NextResponse.json(
+      { success: false, error: e.message },
+      { status: 500 },
+    );
   }
 }

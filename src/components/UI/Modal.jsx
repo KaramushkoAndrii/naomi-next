@@ -7,7 +7,6 @@ import { useModalStore } from "@/libs/useModalStore";
 
 export const Modal = ({ title = "Статус замовлення" }) => {
   const { isOpen, closeModal, modalType, modalData } = useModalStore();
-  console.log("thi is data:", modalData);
   if (!isOpen) return null;
 
   const renderContent = () => {
@@ -16,7 +15,6 @@ export const Modal = ({ title = "Статус замовлення" }) => {
         return <ModalOrder />;
       case "status":
         return <ModalRequest data={modalData} />;
-      // return <h3>{modalData.title}</h3>;
       default:
         return null;
     }
@@ -30,7 +28,12 @@ export const Modal = ({ title = "Статус замовлення" }) => {
         <div className="custom-modal bg-white rounded-main-radius shadow-2xl w-full max-w-md overflow-hidden">
           <header className="flex justify-between items-center p-2">
             <h3>{modalData.header ? modalData.header : title}</h3>
-            <button onClick={closeModal}>X</button>
+            <button
+              onClick={closeModal}
+              className="px-2 hover:bg-primary-blue rounded-full hover:cursor-pointer"
+            >
+              X
+            </button>
           </header>
           <div className="p-4">{renderContent()}</div>
         </div>

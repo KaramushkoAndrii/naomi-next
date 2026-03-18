@@ -1,6 +1,12 @@
 export async function sendTelegramMessage(data) {
   const token = process.env.TELEGRAM_API_KEY_BOT;
-  const chatIds = process.env.CHAT_ID_TOKEN.split(",");
+  const chatIdsRaws = process.env.CHAT_ID_TOKEN;
+
+  if (!token || !chatIdsRaws) {
+    throw new Error("Змінні середовища втрачено");
+  }
+
+  const chatIds = chatIdsRaws.split(",");
 
   const message = `
 Нова заявка з сайту!
@@ -32,5 +38,5 @@ export async function sendTelegramMessage(data) {
     return response.json();
   });
 
-  return Promise.all(requests);
+  return Promise.allSettled(requests);
 }

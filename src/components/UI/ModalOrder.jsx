@@ -28,8 +28,6 @@ export const ModalOrder = () => {
   const { tel } = ValidationRules;
 
   const onSubmit = async (data) => {
-    console.log("The submit data:", data);
-
     setLoading(true);
 
     try {
