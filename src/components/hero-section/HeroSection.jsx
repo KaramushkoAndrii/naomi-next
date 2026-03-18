@@ -20,9 +20,9 @@ export const HeroSection = () => {
           </p>
           <div className="flex flex-col gap-4 w-fit md:flex-row md:justify-center">
             <ModalOpenButton
-              modalId="main-form"
-              text={"Замовити прибирання"}
-              classNames="w-full"
+              text="Замовити прибирання"
+              type="order"
+              header="Оформити замовлення"
             />
             <button className="btn btn-primary w-full">
               <Link href="#advantage">Детальніше</Link>

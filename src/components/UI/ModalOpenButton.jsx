@@ -1,17 +1,14 @@
 "use client";
 
-export const ModalOpenButton = ({ text, modalId, classNames = "" }) => {
-  const openHandler = () => {
-    const modal = document.getElementById(modalId);
-    if (modal) {
-      modal.showModal();
-    } else {
-      alert(`modal with ${modalId} is not defined`);
-    }
-  };
+import { useModalStore } from "@/libs/useModalStore";
+export const ModalOpenButton = ({ text, type, ...rest }) => {
+  const { openModal } = useModalStore();
 
   return (
-    <button className={`btn btn-primary ${classNames}`} onClick={openHandler}>
+    <button
+      className="btn btn-primary w-full"
+      onClick={() => openModal(type, { ...rest })}
+    >
       {text}
     </button>
   );
