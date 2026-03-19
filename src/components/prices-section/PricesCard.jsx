@@ -1,7 +1,7 @@
 import { ModalOpenButton } from "../UI/ModalOpenButton";
 
 export const PricesCard = ({ card }) => {
-  const { title, price, services, modalId } = card;
+  const { title, price, services } = card;
   const agree = () => {
     return (
       <svg
@@ -35,11 +35,7 @@ export const PricesCard = ({ card }) => {
             </li>
           ))}
         </ul>
-        {/* <ModalOpenButton
-          modalId={modalId}
-          text={"Замовити"}
-          classNames={"flex w-full mt-6"}
-        /> */}
+        <ModalOpenButton text="Замовити" type="order" />
       </div>
     </div>
   );

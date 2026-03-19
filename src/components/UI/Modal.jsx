@@ -30,7 +30,7 @@ export const Modal = ({ title = "Статус замовлення" }) => {
             <h3>{modalData.header ? modalData.header : title}</h3>
             <button
               onClick={closeModal}
-              className="px-2 hover:bg-primary-blue rounded-full hover:cursor-pointer"
+              className="px-2 hover:bg-primary-violet transition-colors duration-300 hover:text-white rounded-full hover:cursor-pointer"
             >
               X
             </button>
