@@ -31,7 +31,7 @@ export const ContactData = [
   },
   {
     title: "viber",
-    src: "viber://chat?number=%2B380688282844",
+    src: "viber://chat?number=380688282844",
     type: "link",
     icon: FaViber,
     colorClass: "text-[#7360f2]",
