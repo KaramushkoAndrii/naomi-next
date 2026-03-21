@@ -10,7 +10,7 @@ import { RiUserSmileLine } from "react-icons/ri";
 
 export const ChoiceCardsData = [
   {
-    title: "Єкологія та безпека",
+    title: "Екологія та безпека",
     iconsList: [
       <MdOutlineHealthAndSafety size={60} key={1} />,
       <GiEcology size={60} key={2} />,
@@ -21,7 +21,7 @@ export const ChoiceCardsData = [
       alt: "eco clining Naomy",
     },
     description:
-      "Мы используем только сертифицированные гипоаллергенные средства, безопасные для детей и домашних животных",
+      "Naomy: еко-засоби та безпека для дітей і тварин. Професійний захист вашої оселі",
     colors: {
       from: "from-card-eco-top",
       to: "to-card-eco-bottom",
@@ -41,7 +41,7 @@ export const ChoiceCardsData = [
       alt: "profecional cliner",
     },
     description:
-      "В нашем арсенале — профессиональное оборудование, которое позволяет добиваться результата",
+      "Сучасне обладнання та інноваційні методи Naomy для ідеальної чистоти поверхонь",
     colors: {
       from: "from-card-tehno-top",
       to: "to-card-tehno-bottom",
@@ -61,7 +61,7 @@ export const ChoiceCardsData = [
       alt: "save your time with Naomy clining",
     },
     description:
-      "Пока мы доводим поверхности до блеска, вы можете посвятить время семье, хобби или отдыху. ",
+      "Naomy прибирає — ви відпочиваєте. Оперативний сервіс, що звільняє час для головного.",
     colors: {
       from: "from-card-care-top",
       to: "to-card-care-bottom",
