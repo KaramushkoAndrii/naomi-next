@@ -89,7 +89,7 @@ export const ModalOrder = () => {
       />
       <label className="flex flex-col-reverse">
         <select
-          className="select select-primary w-full"
+          className="select select-primary w-full text-white bg-primary-violet"
           {...register("service")}
         >
           {ServicesListData.map((item) => (

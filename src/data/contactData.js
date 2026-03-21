@@ -39,7 +39,7 @@ export const ContactData = [
   },
   {
     title: "instagram",
-    src: "https://daisyui.com/components/modal/#",
+    src: "https://www.instagram.com/naomycleaningcompany?igsh=MTJhd2c2d2F1dXJ0Yw%3D%3D",
     type: "link",
     icon: FaInstagram,
     colorClass: "text-[#E1306C]",
