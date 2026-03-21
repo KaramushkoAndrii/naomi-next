@@ -9,8 +9,8 @@ export const ChoiceCardsData = [
       <GiEcology size={60} key={3} />,
     ],
     imgData: {
-      src: "/about.webp",
-      alt: "clininggggggg",
+      src: "/eco.webp",
+      alt: "eco clining Naomy",
     },
     description:
       "Мы используем только сертифицированные гипоаллергенные средства, безопасные для детей и домашних животных",
@@ -29,8 +29,8 @@ export const ChoiceCardsData = [
       <GiEcology size={60} key={3} />,
     ],
     imgData: {
-      src: "/about.webp",
-      alt: "clininggggggg2222222222",
+      src: "/techno.webp",
+      alt: "profecional cliner",
     },
     description:
       "В нашем арсенале — профессиональное оборудование, которое позволяет добиваться результата",
@@ -49,8 +49,8 @@ export const ChoiceCardsData = [
       <GiEcology size={60} key={3} />,
     ],
     imgData: {
-      src: "/about.webp",
-      alt: "clininggggggg2222222222",
+      src: "/time.webp",
+      alt: "save your time with Naomy clining",
     },
     description:
       "Пока мы доводим поверхности до блеска, вы можете посвятить время семье, хобби или отдыху. ",

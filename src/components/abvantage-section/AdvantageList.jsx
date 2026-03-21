@@ -7,7 +7,9 @@ export const AdvantageList = ({ advantageList }) => {
           className="flex flex-col py-8 justify-center w-[40dvw] max-w-[320px] items-center gap-2 border border-solid border-primary-blue rounded-main-radius shadow-md hover:shadow-2xl shadow-primary-blue/70 transition-shadow duration-300 bg-white"
         >
           <i>{advantageItem.icon}</i>
-          <p className="text-list-item text-black">{advantageItem.text}</p>
+          <p className="text-list-item text-black text-center">
+            {advantageItem.text}
+          </p>
         </li>
       ))}
     </ul>
