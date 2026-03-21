@@ -13,18 +13,28 @@ export const NavigationData = [
 
 export const NavigationServicesData = [
   {
-    text: "Генеральне прибрання",
+    text: "Генеральне прибирання",
     src: "#general",
     id: 1,
   },
   {
-    text: "Приьирання після ремонту",
+    text: "Прибирання після ремонту",
     src: "#remont",
     id: 2,
   },
   {
-    text: "Вологе прибирання",
-    src: "#vologe",
+    text: "Базове прибирання приміщення",
+    src: "#base",
     id: 3,
+  },
+  {
+    text: "Генеральне прибирання сан.кімнати",
+    src: "#washroom",
+    id: 4,
+  },
+  {
+    text: "Генеральне прибирання кухні",
+    src: "#kitchen",
+    id: 5,
   },
 ];
