@@ -18,7 +18,7 @@ export const NavigationServicesData = [
     id: 1,
   },
   {
-    text: "Приьирання після ремонту",
+    text: "Прибирання після ремонту",
     src: "#remont",
     id: 2,
   },

@@ -1,12 +1,20 @@
 import { GiEcology } from "react-icons/gi";
+import { MdOutlineHealthAndSafety } from "react-icons/md";
+import { AiOutlineSafety } from "react-icons/ai";
+import { HiOutlineCpuChip } from "react-icons/hi2";
+import { MdOutlineAutoFixHigh } from "react-icons/md";
+import { TbSettingsAutomation } from "react-icons/tb";
+import { MdOutlineAccessTime } from "react-icons/md";
+import { HiOutlineRocketLaunch } from "react-icons/hi2";
+import { RiUserSmileLine } from "react-icons/ri";
 
 export const ChoiceCardsData = [
   {
     title: "Єкологія та безпека",
     iconsList: [
-      <GiEcology size={60} key={1} />,
+      <MdOutlineHealthAndSafety size={60} key={1} />,
       <GiEcology size={60} key={2} />,
-      <GiEcology size={60} key={3} />,
+      <AiOutlineSafety size={60} key={3} />,
     ],
     imgData: {
       src: "/eco.webp",
@@ -24,9 +32,9 @@ export const ChoiceCardsData = [
   {
     title: "Технологічний підхід",
     iconsList: [
-      <GiEcology size={60} key={1} />,
-      <GiEcology size={60} key={2} />,
-      <GiEcology size={60} key={3} />,
+      <HiOutlineCpuChip size={60} key={1} />,
+      <MdOutlineAutoFixHigh size={60} key={2} />,
+      <TbSettingsAutomation size={60} key={3} />,
     ],
     imgData: {
       src: "/techno.webp",
@@ -44,9 +52,9 @@ export const ChoiceCardsData = [
   {
     title: "Турбота про ваш час",
     iconsList: [
-      <GiEcology size={60} key={1} />,
-      <GiEcology size={60} key={2} />,
-      <GiEcology size={60} key={3} />,
+      <MdOutlineAccessTime size={60} key={1} />,
+      <HiOutlineRocketLaunch size={60} key={2} />,
+      <RiUserSmileLine size={60} key={3} />,
     ],
     imgData: {
       src: "/time.webp",
