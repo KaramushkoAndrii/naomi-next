@@ -16,7 +16,7 @@ export const HeroSection = () => {
             Клінінговая компанія Naomy
           </h1>
           <p className="mb-5 text-2xl font-medium w-[55%]">
-            Клінінгові услуги Київ та область
+            Клінінгові послуги Київ та область
           </p>
           <div className="flex flex-col gap-4 w-fit md:flex-row md:justify-center">
             <ModalOpenButton
