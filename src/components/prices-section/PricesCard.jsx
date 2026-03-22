@@ -21,7 +21,7 @@ export const PricesCard = ({ card }) => {
     );
   };
   return (
-    <div className="card w-90 bg-base-100 shadow-sm">
+    <div className="card w-90 shadow-sm hover:shadow-2xl shadow-primary-blue/70 transition-shadow duration-300 bg-white">
       <div className="card-body justify-between">
         <div className="flex flex-col gap-4 justify-between">
           <h2 className="text-3xl font-bold">{title}</h2>
