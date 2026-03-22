@@ -26,6 +26,22 @@ export const metadata = {
   title: "Naomy-клінінгова компанія",
   description:
     "Клінінгова компанія Naomy. Генеральне прибирання, прибирання після ремонту, підтримуюче прибирання, хімчистка",
+  openGraph: {
+    title: "Naomy-клінінгова компанія",
+    description: "Професійні клінінгові послуги у Київі та області",
+    url: "https://naomi-next.vercel.app/",
+    siteName: "Naomy",
+    images: [
+      {
+        url: "https://naomi-next.vercel.app/preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Naomy clining company",
+      },
+    ],
+    locale: "uk_UA",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
