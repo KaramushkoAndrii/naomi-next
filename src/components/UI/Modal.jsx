@@ -25,7 +25,7 @@ export const Modal = ({ title = "Статус замовлення" }) => {
       <div
         className={`flex fixed inset-0 bg-black/50 backdrop-blur-sm z-50 items-center justify-center p-4`}
       >
-        <div className="custom-modal bg-white rounded-main-radius shadow-2xl w-full max-w-md overflow-hidden">
+        <div className="custom-modal bg-white rounded-main-radius shadow-2xl w-full max-w-md overflow-hidden dark:bg-black/70">
           <header className="flex justify-between items-center p-2">
             <h3>{modalData.header ? modalData.header : title}</h3>
             <button
