@@ -12,7 +12,7 @@ export const HeroSection = () => {
       <div className="hero-overlay"></div>
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-md flex flex-col items-center">
-          <h1 className="flex flex-col mb-5 text-4xl font-bold w-[60%]">
+          <h1 className="flex flex-col mb-5 text-4xl font-bold w-[90%]">
             Клінінговая компанія Naomy
           </h1>
           <p className="mb-5 text-2xl font-medium w-[55%]">
@@ -25,7 +25,9 @@ export const HeroSection = () => {
               header="Оформити замовлення"
             />
             <button className="btn btn-primary w-full">
-              <Link href="#advantage">Детальніше</Link>
+              <Link href="#advantage" className="w-full">
+                Детальніше
+              </Link>
             </button>
           </div>
         </div>

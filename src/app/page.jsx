@@ -5,10 +5,9 @@ import { AdvantageSection } from "@/components/abvantage-section/AdvantageSectio
 import { ServicesSection } from "@/components/services-section/ServicesSection";
 import { PricesSection } from "@/components/prices-section/PricesSection";
 import { FormSection } from "@/components/form-section/FormSection";
-import { Fab } from "@/components/UI/Fab";
-import { ContactData } from "@/data/contactData";
 
 export default async function Home({ params }) {
+  // throw new Error("App crashed");
   return (
     <>
       <HeroSection />
@@ -18,7 +17,6 @@ export default async function Home({ params }) {
         <ServicesSection />
         <PricesSection />
         <FormSection />
-        <Fab list={ContactData} />
       </Container>
     </>
   );

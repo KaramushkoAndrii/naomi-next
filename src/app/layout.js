@@ -4,6 +4,8 @@ import { Footer } from "@/components/footer/Footer";
 import { Fira_Sans, Kurale } from "next/font/google";
 import { Modal } from "@/components/UI/Modal";
 import { MetaPixel } from "@/libs/MetaPixel";
+import { Fab } from "@/components/UI/Fab";
+import { ContactData } from "@/data/contactData";
 import "./globals.css";
 
 const firaSans = Fira_Sans({
@@ -35,10 +37,10 @@ export default function RootLayout({ children }) {
         <MetaPixel />
         <div className="drawer drawer-end min-h-svh">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-          <div className="drawer-content flex flex-col h-full min-h-screen">
+          <div className="drawer-content flex flex-col min-h-screen">
             {/* Navbar and PC menu */}
             <Header />
-            <main className="pt-15">
+            <main className="pt-15 flex-1">
               {/* Page content here */}
               {children}
             </main>
@@ -47,6 +49,7 @@ export default function RootLayout({ children }) {
           </div>
           {/* there is mobile menu logic  */}
           <NavigationMobile />
+          <Fab list={ContactData} />
         </div>
       </body>
     </html>
