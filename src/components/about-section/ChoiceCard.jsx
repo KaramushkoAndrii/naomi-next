@@ -12,9 +12,13 @@ export const ChoiceCard = ({ data }) => {
           <li key={index}>{icon}</li>
         ))}
       </ul>
-      <h2 className="text-main-text text-nowrap text-center">{title}</h2>
+      <h2 className="text-main-text text-nowrap text-center dark:text-black">
+        {title}
+      </h2>
       <ImgContainer src={imgData.src} alt={imgData.alt} />
-      <p className="text-main-text mb-0 mt-auto max-h-[50%]">{description}</p>
+      <p className="text-main-text mb-0 mt-auto max-h-[50%] dark:text-black">
+        {description}
+      </p>
     </li>
   );
 };
