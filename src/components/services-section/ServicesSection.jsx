@@ -1,12 +1,12 @@
 import { ServicesList } from "./ServicesList";
-import { ServicesListData } from "@/data/servicesListData";
 
-export const ServicesSection = () => {
+export const ServicesSection = ({ data }) => {
+  const { title, list } = data;
   return (
     <section className="my-4">
-      <h2 className="text-sub-title py-4">Наші послуги</h2>
+      <h2 className="text-sub-title py-4">{title}</h2>
 
-      <ServicesList list={ServicesListData} />
+      <ServicesList list={list} />
     </section>
   );
 };

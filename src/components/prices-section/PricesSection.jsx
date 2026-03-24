@@ -1,12 +1,12 @@
 import { PricesList } from "./PricesList";
-import { PricesData } from "@/data/pricesData";
 
-export const PricesSection = () => {
+export const PricesSection = ({ data }) => {
+  const { title, list, tooltip } = data;
   return (
     <section className="flex flex-col gap-4">
-      <h2 className="text-sub-title py-4">Наші ціни</h2>
-      <PricesList list={PricesData} />
-      <span className="text-sm">* - за попередньою домовленістю</span>
+      <h2 className="text-sub-title py-4">{title}</h2>
+      <PricesList list={list} />
+      <span className="text-sm">{tooltip}</span>
     </section>
   );
 };

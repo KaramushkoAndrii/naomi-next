@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ModalOpenButton } from "../UI/ModalOpenButton";
 
-export const HeroSection = () => {
+export const HeroSection = ({ data }) => {
+  const { title, description, btnText, src } = data;
   return (
     <div
       className="hero min-h-screen"
@@ -13,11 +14,9 @@ export const HeroSection = () => {
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-md flex flex-col items-center">
           <h1 className="flex flex-col mb-5 text-4xl font-bold w-[90%]">
-            Клінінговая компанія Naomy
+            {title}
           </h1>
-          <p className="mb-5 text-2xl font-medium w-[55%]">
-            Клінінгові послуги Київ та область
-          </p>
+          <p className="mb-5 text-2xl font-medium w-[55%]">{description}</p>
           <div className="flex flex-col gap-4 w-fit md:flex-row md:justify-center">
             <ModalOpenButton
               text="Замовити прибирання"
@@ -25,8 +24,8 @@ export const HeroSection = () => {
               header="Оформити замовлення"
             />
             <button className="btn btn-primary w-full">
-              <Link href="#advantage" className="w-full">
-                Детальніше
+              <Link href={`#${src}`} className="w-full">
+                {btnText}
               </Link>
             </button>
           </div>
