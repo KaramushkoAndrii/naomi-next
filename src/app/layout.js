@@ -29,11 +29,11 @@ export const metadata = {
   openGraph: {
     title: "Naomy-клінінгова компанія",
     description: "Професійні клінінгові послуги у Київі та області",
-    url: "https://naomi-next.vercel.app/",
+    url: "https://naomy-cleaning.kyiv.ua/",
     siteName: "Naomy",
     images: [
       {
-        url: "https://naomi-next.vercel.app/preview.jpg",
+        url: "https://naomy-cleaning.kyiv.ua/preview.jpg",
         width: 1200,
         height: 630,
         alt: "Naomy clining company",
